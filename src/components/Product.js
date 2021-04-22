@@ -1,11 +1,15 @@
 import React from 'react';
 import '../Product.css';
+import { useStateValue } from "./StateProvider";
+import { auth } from '../firebase'
 
-import { useStateValue } from './StateProvider';
+
+
 
 function Product({ id, title, image, price, rating }) {
 
     const [{ basket }, dispatch] = useStateValue();
+
 
     console.log("This is the basket: >>>", basket);
 
